@@ -12,5 +12,3 @@ class EmailParser
     # select only those unique emails
     emails.split(/[,?\s]/).select{|email| email != ""}.uniq
   end
-
-en
