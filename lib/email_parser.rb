@@ -1,7 +1,12 @@
-class Parsers::I18nEn < Parsers::Base
+class EmailParser
+attr_accessor :emails
 
-    def parse
-      except_in_visible_block_quotes do
-        hide_everything_after ["From: ", "Sent: ", "To: "]
-      end
-    end
+def initialize(email)
+  @emails = email
+end
+
+def parse
+  emails.delete(',').split.uniq
+end
+
+end
