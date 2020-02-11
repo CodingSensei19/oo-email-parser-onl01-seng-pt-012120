@@ -1,11 +1,12 @@
 class EmailParser
-  attr_accessor :emails
+attr_accessor :emails
 
-  def initialize(emails)
-    @emails = emails
-  end
+def initialize(email)
+  @emails = email
+end
 
-  def parse
-    self.emails.split(", ").map{|e| e.split(" ")}.flatten.uniq
-  end
+def parse
+  emails.delete(',').split.uniq
+end
+
 end
