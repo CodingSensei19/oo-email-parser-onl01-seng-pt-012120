@@ -10,3 +10,4 @@ class EmailParser
 
     emails.split(/[,?\s]/).select{|email| email != ""}.uniq
   end
+end
